@@ -1,0 +1,9 @@
+.container{
+    position:absolute;
+    left:400px;
+    border:1px solid black;
+    width:300px;
+    }
+    .btn{
+        color:red;
+    }
