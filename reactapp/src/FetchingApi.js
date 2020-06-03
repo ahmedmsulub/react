@@ -1,4 +1,7 @@
 import React, {useState,useEffect} from 'react';
+/**here im creating a api fetching that will be used in other Components that is in need of fetching api
+ * * here we fetch api usernames that is clickable, and when you click a username u will get to userScreen where everything will be shown
+ */
 
 const  FetchingApi = props => {
     const [posts,setPost]= useState([])
@@ -10,28 +13,16 @@ const  FetchingApi = props => {
       })
       .then(data => {
         setPost(data);
-        // console.log(data)
       });
-
     },[])
 
     const clickedUser = e => {
-        // let target = e.target;
         e.preventDefault();
-        // const found = posts.find(user => {
-        //     if(e.target.innerHTML === user.name)
-        // })
-        
         const found = posts.find(user => {
             if(user.name === e.target.innerHTML)return user
         })
-
-        // console.log(e.target.innerHTML)
-        // console.log( found.address.city)
         props.history.push('/UserScreen'+ found.id)
-
-        }
-    
+      }
     return(
         <div>
 
@@ -40,9 +31,7 @@ const  FetchingApi = props => {
                 <li onClick={clickedUser} key={index}>{post.name}</li>
             )
             })}
-        
         </div>
     )
-
 }
 export default FetchingApi;

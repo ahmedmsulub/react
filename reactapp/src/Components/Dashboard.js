@@ -2,7 +2,11 @@ import React, { useState } from 'react'
 import propTypes from 'prop-types'
 import Wrapper from './Wapper';
 import FetchingApi from '../FetchingApi';
-
+/**
+ * 
+ * we have a propTypes thats checks if ur sticking to the rule you set
+ * we have a form that does not have functionality at the time 
+ */
 function Dashboard(props) {
   const Rules = (props) => {
     return(

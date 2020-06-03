@@ -2,7 +2,10 @@ import React,{useState, useEffect} from 'react'
 import { useParams} from 'react-router-dom';
 import propTypes from 'prop-types'
 import "./UserScreen.css"
-/**render here the clicked api users: name, id, */
+/**render here the clicked api users: name,id that was clicked, 
+ * we have a toggle button that shows more information about the user that was clicked
+ * we have a propTypes thats checks if ur sticking to the rule you set
+*/
 function UserScreen (props) {
   const [users, setUsers]=useState([])
   const [toggle, setToggle] = useState(false);

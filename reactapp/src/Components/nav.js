@@ -1,6 +1,8 @@
 import React from 'react';
 // import './App.css';
 import {Link} from 'react-router-dom'
+
+/**here we have links to the screens you will be able to reach */
 function Nav() {
     const navStyle = {
         color:'blue'
